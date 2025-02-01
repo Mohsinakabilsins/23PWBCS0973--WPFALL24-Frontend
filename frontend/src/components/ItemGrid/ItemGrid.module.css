@@ -1,0 +1,93 @@
+/* Container Styles */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title Styles */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Item List Styles */
+.itemGrid {
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+/* Item Card Styles (Each Item) */
+.itemCard {
+  background-color: #fff;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px; /* Space between items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row; /* Items will be aligned in a row */
+  justify-content: space-between; /* Distribute space between items */
+  gap: 10px; /* Adds space between elements in the row */
+  align-items: flex-start; /* Align items to the top */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Item Card Hover Effect */
+.itemCard:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Item Name Styles */
+.itemName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Item Description Styles */
+.itemDescription {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Item Price Styles */
+.itemPrice {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #e94560;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart Button Styles */
+.addToCartButton {
+  background-color: #e94560;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.addToCartButton:hover {
+  background-color: #d13a4f; /* Slightly darker red on hover */
+}
+
+.addToCartButton:active {
+  background-color: #b12d42; /* Even darker red when clicked */
+}
+
+/* No Products Available Styles */
+p {
+  color: #777;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
