@@ -1,22 +1,6 @@
-{
-    "version": 2,
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist"   // Ensure this points to 'dist'
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ],
-    "env": {
-      "VITE_BACKEND_URL": "https://23-pwbcs-0973-wpfall-24.vercel.app"
-    }
+{  
+   "rewrites": [
+        { "source": "/(.*)", "destination": "/" }
+    ]
   }
   
