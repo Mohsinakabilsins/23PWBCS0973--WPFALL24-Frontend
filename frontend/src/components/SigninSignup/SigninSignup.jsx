@@ -174,7 +174,7 @@ function SigninSignup({ children, className }) {
         }
 
         // Signup request
-        await axios.post(`${URL}/api/users/`, { username, password })
+        await axios.post(`${URL}api/users/`, { username, password })
             .then(response => {
                 console.log("Signup successful", response.data);
 
@@ -202,7 +202,7 @@ function SigninSignup({ children, className }) {
         console.log("Login data", loginData);
 
         // Login request
-        axios.post(`${URL}/api/users/signin`, loginData)
+        axios.post(`${URL}api/users/signin`, loginData)
             .then(response => {
                 console.log("Login successful", response.data);
 
