@@ -26,7 +26,7 @@ function Cart({ className }) {
                 headers: { Authorization: `Bearer ${token}` }
             };
             
-            const response = await axios.get(`${URL}/api/cart/getCart`, config);
+            const response = await axios.get(`${URL}api/cart/getCart`, config);
             setCartItems(response.data.products);
             setTotalPrice(response.data.totalPrice);
         } catch (error) {
@@ -52,7 +52,7 @@ function Cart({ className }) {
           if (!token) throw new Error('No token found');
           
           await axios.put(
-              `${URL}/api/cart/updateCart`,
+              `${URL}api/cart/updateCart`,
               { productId, quantity },
               { headers: { Authorization: `Bearer ${token}` }}
           );
@@ -73,7 +73,7 @@ function Cart({ className }) {
                 headers: { Authorization: `Bearer ${token}` }
             };
 
-            await axios.put(`${URL}/api/cart/deleteItem`, {productId},config);
+            await axios.put(`${URL}api/cart/deleteItem`, {productId},config);
             fetchCart();
         } catch (error) {
             console.error("Error removing item", error);
