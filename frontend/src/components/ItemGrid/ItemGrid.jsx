@@ -20,7 +20,7 @@ function ItemGrid() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`${URL}/api/products/getProducts`);
+                const response = await axios.get(`${URL}api/products/getProducts`);
 
                 setItems(response.data.products || []);
             } catch (error) {
@@ -45,13 +45,13 @@ function ItemGrid() {
             };
             
             const response = await axios.put(
-                `${URL}/api/cart/updateCart`, 
+                `${URL}api/cart/updateCart`, 
                 { productId, quantity: 1 },
                 config
             );
     
             if (response.data) {
-                const { data } = await axios.get(`${URL}/api/cart/getCart`, config);
+                const { data } = await axios.get(`${URL}api/cart/getCart`, config);
 
                 setCartItems(data.products || []);
                 setTotalPrice(data.totalPrice || 0);
@@ -71,7 +71,7 @@ function ItemGrid() {
 
     const deleteProduct = async (productId) => {
         try {
-            const response = await axios.delete(`${URL}/api/products/${productId}`);
+            const response = await axios.delete(`${URL}api/products/${productId}`);
             if(response.status === 200) {
                 alert("Product deleted successfully");
                 setCount(count + 1);

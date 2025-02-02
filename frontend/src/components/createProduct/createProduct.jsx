@@ -17,7 +17,7 @@ function createProduct({children, className}) {
     try {
         console.log("data", payload);
 
-        const response = await axios.post(`${URL}/api/products/`, payload, {
+        const response = await axios.post(`${URL}api/products/`, payload, {
             headers: {
                 'Content-Type': 'application/json', // Set JSON Content-Type
             },
