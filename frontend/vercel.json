@@ -2,24 +2,17 @@
     "version": 2,
     "builds": [
       {
-        "src": "vite.config.js",
+        "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "dist"
+          "distDir": "dist"   // Ensure this points to 'dist'
         }
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/index.html",
-        "status": 200
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "https://23-pwbcs-0973-wpfall-24.vercel.app/api/$1"
+        "dest": "/index.html"
       }
     ],
     "env": {
